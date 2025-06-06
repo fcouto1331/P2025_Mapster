@@ -10,7 +10,7 @@ namespace C4PRESENTATION_CONSOLE.Dapper
         public DapperContext() 
         {
             string projectDirectory = Directory.GetCurrentDirectory();
-            string caminhoCompleto = Path.Combine(projectDirectory.Replace("\\bin\\Debug\\net8.0", ""), "AppData", "P2025_FluentValidation.db");
+            string caminhoCompleto = Path.Combine(projectDirectory.Replace("\\bin\\Debug\\net8.0", ""), "AppData", "P2025_Mapster.db");
             _conexao = $"Data Source={caminhoCompleto}";
         }
 

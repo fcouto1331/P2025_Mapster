@@ -2,7 +2,7 @@
 using C4PRESENTATION_CONSOLE.DTOs;
 using C4PRESENTATION_CONSOLE.Interfaces.IRepositories;
 using C4PRESENTATION_CONSOLE.Interfaces.IServices;
-using C4PRESENTATION_CONSOLE.Mappings;
+using C4PRESENTATION_CONSOLE.Mapster;
 using C4PRESENTATION_CONSOLE.Repositories;
 using C4PRESENTATION_CONSOLE.Services;
 using C4PRESENTATION_CONSOLE.SQLite;
@@ -103,7 +103,7 @@ public class ClienteApp
     public static void Listar(IClienteService _service)
     {
         Console.WriteLine("\nListar");
-        List<ClienteDTO> cliente = Mapper.ToListClienteDTO(_service.Listar());
+        List<ClienteDTO> cliente = Mapper.ToClienteDTO(_service.Listar());
         foreach (var item in cliente)
         {
             Console.WriteLine($"Id: {item.Id}, Nome: {item.Nome}, IdGuid: {item.IdGuid}, Telefone: {item.Telefone}, Cidade: {item.Cidade}");
